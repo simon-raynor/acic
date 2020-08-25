@@ -1,0 +1,13 @@
+%borderbox {
+	box-sizing	: border-box;
+}
+
+body,
+#root {
+	@extend %borderbox;
+	
+	height	: 100vh;
+	margin	: 0;
+	padding	: 0;
+}
+

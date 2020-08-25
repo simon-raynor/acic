@@ -1,0 +1,52 @@
+@import 'main';
+
+
+$color-txt	: #eee;
+
+$color-bg		: blue;
+$color-wide		: green;
+$color-narrow	: red;
+
+
+// define reusable heading styles
+%heading {
+	background	: var(--txt);
+	color		: var(--bg);
+	padding	: 0.125em 0.25em 0;
+}
+
+.colorwrapper {
+	@extend %borderbox;
+	
+	--bg	: #{$color-bg};
+	--txt	: #{$color-txt};
+	
+	background		: var(--bg); 
+	color			: var(--txt);
+	font-family	: monospace;
+	height			: 100%;
+	overflow		: hidden; /* prevent margins escaping */
+	
+	&.wide {
+		--bg	: #{$color-wide};
+	}
+	
+	&.narrow {
+		--bg	: #{$color-narrow};
+	}
+	
+	article {
+		max-width	: 40em;
+		margin		: 0 auto;
+		padding	: 1.5em;
+		
+		h1 {
+			@extend %heading;
+			font-size	: 1.5em;
+		}
+		h2 {
+			@extend %heading;
+			font-size	: 1em;
+		}
+	}
+}
