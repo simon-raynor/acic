@@ -35,6 +35,14 @@ $color-narrow	: red;
 		--bg	: #{$color-narrow};
 	}
 	
+	&.toosmall::after {
+		@extend %heading;
+		content		: 'Please ensure viewport is at least 400px high!';
+		position	: absolute;
+		bottom		: 0;
+		right		: 0;
+	}
+	
 	article {
 		max-width	: 40em;
 		margin		: 0 auto;

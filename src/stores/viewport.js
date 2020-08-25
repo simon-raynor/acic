@@ -11,14 +11,14 @@ class ViewportStore extends Store {
 		super( dispatcher );
 		
 		this.state	= {
-						height	: -Infinity,
-						width	: -Infinity
+						height	: window.innerHeight,
+						width	: window.innerWidth
 					};
 		
 	}
 	
 	
-	__onDispatch( payload ) {
+	__onDispatch( payload ) {console.log( arguments );
 		if ( payload.actionType === 'viewport-resize' ) {
 			this.state.height	= payload.dimensions.height;
 			this.state.width	= payload.dimensions.width;
