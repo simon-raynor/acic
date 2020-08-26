@@ -1,0 +1,32 @@
+Hi Fred,
+
+I tried to get in touch but I guess your phone died. I got your message
+about the Advanced Compoter Intelligenced Colors work and have tried my
+best to satisfy the requirements.
+
+Points one through three should be working well, I didn't have time to
+set up full testing but I haven't been able to break it yet. I
+did have a somewhat philosophical moment when contemplating how to notify
+the user that update logic has been suspended without running any update
+logic. As a compromise I've added a message which will show if the screen
+is too small on load.
+
+To answer your question in point 4, Flux isn't expensive. It's an approach
+to writing React apps (the thing the ACIC is built with), and while not
+familiar with it myself I've tried to incorporate its principles to the
+best of my ability. Hopefully I can get some feedback from the maintenance
+team regarding how they want to move forwards with this (they've been
+impossible to get in touch with too).
+
+Point 5 is a tricky one, I think it refers to the river Reuss which "separates"
+the Swiss city of Lucerne. I'm not certain though, are your dev team into
+riddles by any chance? Regardless you can assure them that all efforts have
+been made to make this project as easy for them to build upon, and to
+follow modern standards with regards to code structure and maintainability.
+
+You can see the app running at http://localhost:3000, let me know when you get
+this message and we can work out how to proceed.
+
+Kind Regards,
+
+Simon

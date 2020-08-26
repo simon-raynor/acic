@@ -5,7 +5,8 @@ const instance	= new Dispatcher();
 
 export default instance;
 
-
+// bind the window resize event (action) here, even though it's not *really*
+// the correct place for it
 function handleResize() {
 	
 	instance.dispatch({

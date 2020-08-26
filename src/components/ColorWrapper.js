@@ -17,11 +17,15 @@ class ColorWrapper extends React.Component {
 										? viewportClassPrefix + ' toosmall'
 										: viewportClassPrefix };
 		
-		viewportStore.addListener( () => {
+	}
+	
+	componentWillMount() {
+		
+		this._storeEvt	= viewportStore.addListener( () => {
 			
 			const	{ height, width }	= viewportStore.state;
 			
-			// don't update if less than 400px tall
+			// update if more than 400px tall
 			if ( height >= 400 ) {
 				
 				const	classes	= [ viewportClassPrefix ];
@@ -36,6 +40,14 @@ class ColorWrapper extends React.Component {
 			// of "update logic", so let's just fail silently I guess...
 			
 		} );
+		
+	}
+	
+	componentWillUnmount() {
+		
+		// prevent multiple listeners being bound by calling `remove()`
+		// when the component is unmounted
+		this._storeEvt && this._storeEvt.remove();
 		
 	}
 	

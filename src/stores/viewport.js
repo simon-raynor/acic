@@ -1,8 +1,5 @@
-// this file creates a flux store for the viewport size
-
 import dispatcher from '../dispatcher';
 import { Store } from 'flux/utils';
-
 
 class ViewportStore extends Store {
 	
@@ -17,8 +14,7 @@ class ViewportStore extends Store {
 		
 	}
 	
-	
-	__onDispatch( payload ) {console.log( arguments );
+	__onDispatch( payload ) {
 		if ( payload.actionType === 'viewport-resize' ) {
 			this.state.height	= payload.dimensions.height;
 			this.state.width	= payload.dimensions.width;

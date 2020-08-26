@@ -24,8 +24,7 @@ $color-narrow	: red;
 	background		: var(--bg); 
 	color			: var(--txt);
 	font-family	: monospace;
-	height			: 100%;
-	overflow		: hidden; /* prevent margins escaping */
+	min-height	: 100vh;
 	
 	&.wide {
 		--bg	: #{$color-wide};
